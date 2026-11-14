@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Written Case Assignment</title>
+<title>Exam 2: Written Part</title>
 <style>
 :root{--bg:#f8f6f1;--paper:#fffdf9;--ink:#1f2328;--muted:#5d6670;--line:#e3ded3;--accent:#0f5f6b;--accent-soft:#e3f0f1;--warn:#a1471b;--pt:#1f2328;--lim:#b4532a;--cl:#0f5f6b;--shadow:0 1px 2px rgba(0,0,0,.04),0 6px 24px rgba(0,0,0,.05)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15181b;--paper:#1c2024;--ink:#e8e6e1;--muted:#a3abb3;--line:#30363c;--accent:#62b6c1;--accent-soft:#1f3236;--warn:#e39a6f;--pt:#e8e6e1;--lim:#e39a6f;--cl:#62b6c1;--shadow:none}}
@@ -21,8 +21,8 @@ h1{font-size:clamp(28px,5vw,40px);margin:6px 0 8px}
 .card h2{font-size:22px;margin-bottom:10px}
 ol.inst{padding-left:20px;margin:8px 0 0}ol.inst li{margin:4px 0}
 form{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
-input{font:inherit;font-size:18px;letter-spacing:.06em;padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);min-width:0;flex:1 1 220px;text-transform:uppercase}
-input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+#code{font:inherit;font-size:18px;letter-spacing:.06em;padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);min-width:0;flex:1 1 220px;text-transform:uppercase}
+#code:focus,textarea.ans:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
 button{font:inherit;font-weight:600;padding:12px 20px;border-radius:10px;border:0;background:var(--accent);color:var(--paper);cursor:pointer}
 button.ghost{background:transparent;color:var(--accent);border:1.5px solid var(--accent)}
 .err{color:var(--warn);min-height:1.4em;margin:8px 0 0;font-size:15px}
@@ -57,15 +57,30 @@ details{margin:8px 0}summary{cursor:pointer;color:var(--accent);font-weight:600}
 .chart text{fill:var(--muted);font-size:11px;font-family:inherit}
 .foot{color:var(--muted);font-size:13px;margin-top:30px;text-align:center}
 .hidden{display:none}
-@media (max-width:560px){.wrap{padding:24px 14px 60px}.card,.case{padding:18px 14px}.receipt .actions{margin-left:0}}
-@media print{body{background:#fff;color:#000;font-size:12px}.wrap{padding:0;max-width:none}.card.intro,.toc,.receipt .actions,form,.foot{display:none}.case{box-shadow:none;break-inside:auto;page-break-before:always;border:0;padding:0}.case:first-of-type{page-break-before:auto}details{display:block}details>*{display:block}}
+.answers{margin-top:16px;border-top:1px dashed var(--line);padding-top:6px}
+.answers h3{color:var(--accent)!important}
+.answers label{display:block;font-weight:600;font-size:14px;margin:14px 0 6px}
+textarea.ans{display:block;width:100%;min-height:130px;font:inherit;font-size:16px;line-height:1.55;padding:10px 12px;border:1.5px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);resize:vertical}
+.wc{font-size:12px;color:var(--muted);text-align:right;margin-top:3px}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:5;background:var(--paper);border-top:1px solid var(--line);box-shadow:0 -4px 18px rgba(0,0,0,.06)}
+.bar .in{max-width:900px;margin:0 auto;padding:10px 20px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center}
+.bar .st{font-size:14px;color:var(--muted);flex:1 1 220px}.bar .st b{color:var(--ink)}
+.bar button{padding:9px 14px;font-size:14px}
+body.has-bar{padding-bottom:84px}
+.finish ol{padding-left:20px}.finish li{margin:6px 0}
+.filebtn{display:inline-block;font-weight:600;color:var(--accent);border:1.5px solid var(--accent);border-radius:10px;padding:9px 14px;cursor:pointer;font-size:14px}
+.filebtn input{display:none}
+#printsub{display:none}
+.deliv{background:var(--accent-soft);border-radius:10px;padding:12px 14px;margin:14px 0 0;font-size:15px}
+@media (max-width:560px){.wrap{padding:24px 14px 60px}.card,.case{padding:18px 14px}.receipt .actions{margin-left:0}.bar .in{padding:8px 12px}}
+@media print{body{background:#fff;color:#000;font-size:12px;padding:0!important}.bar,.answers,.finish{display:none!important}body.print-sub .wrap{display:none}body.print-sub #printsub{display:block}#printsub h1{font-size:22px}#printsub h2{font-size:15px;margin:16px 0 4px;color:#0f5f6b}#printsub .pp{font-style:italic;color:#555;margin:6px 0 2px}#printsub .pa{white-space:pre-wrap;margin:0 0 8px 18px}.wrap{padding:0;max-width:none}.card.intro,.toc,.receipt .actions,form,.foot{display:none}.case{box-shadow:none;break-inside:auto;page-break-before:always;border:0;padding:0}.case:first-of-type{page-break-before:auto}details{display:block}details>*{display:block}}
 </style>
 </head>
 <body>
 <div class="wrap">
   <div class="mast">
-    <div class="eyebrow">Version E2-v1 · frozen</div>
-    <h1>Written Case Assignment</h1>
+    <div class="eyebrow">Exam 2 · Version E2-v1</div>
+    <h1>Exam 2: Written Part</h1>
     <p class="sub" id="sub"></p>
   </div>
 
@@ -77,44 +92,137 @@ details{margin:8px 0}summary{cursor:pointer;color:var(--accent);font-weight:600}
   <div class="card intro" id="intro">
     <h2>Before you start</h2>
     <ol class="inst" id="inst"></ol>
+    <p class="deliv"><b>What you hand in:</b> type your answers in the boxes on this page, press <b>Download my answers</b> when you finish, and upload that file (Word or PDF) to Canvas before 11:59 PM. This page does not submit for you; only the file on Canvas counts.</p>
     <form id="f" autocomplete="off">
       <input id="code" name="code" placeholder="QL-XXXXX" aria-label="Your participation code" maxlength="12" spellcheck="false">
       <button type="submit">Show my case</button>
     </form>
     <p class="err" id="err" role="alert"></p>
+    <p class="note">Started on another device or browser? <label class="filebtn">Continue from a downloaded file<input type="file" id="load1" accept=".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document"></label></p>
   </div>
 
   <div id="out" class="hidden">
     <div class="receipt">
-      <div><span class="lbl">Copy this line to the top of your answers</span><code id="rcpt"></code></div>
-      <div class="actions"><button class="ghost" id="copy" type="button">Copy</button><button class="ghost" id="print" type="button">Save as PDF / print</button><button class="ghost" id="other" type="button">Different code</button></div>
+      <div><span class="lbl">Your receipt (added to your answer file automatically)</span><code id="rcpt"></code></div>
+      <div class="actions"><button class="ghost" id="print" type="button">Save my case data as PDF</button><button class="ghost" id="other" type="button">Different code</button></div>
     </div>
     <nav class="toc" id="toc" aria-label="Cases"></nav>
     <div id="cases"></div>
+    <section class="card finish" id="finish">
+      <h2>Finish and submit</h2>
+      <ol>
+        <li>Check that every part has an answer: <b id="left"></b></li>
+        <li>Press <b>Download my answers (.docx)</b>. If you prefer PDF, press <b>Save answers as PDF</b> and choose “Save as PDF” in the print window.</li>
+        <li>Open the file to check it, then upload it to the Exam 2 Written Part on Canvas before <b>11:59 PM</b>.</li>
+      </ol>
+      <p><button id="dl2" type="button">Download my answers (.docx)</button> <button class="ghost" id="pdf2" type="button">Save answers as PDF</button></p>
+      <p class="note">Your answers are saved automatically in this browser on this device. To move to another device, download your file and use “Continue from a downloaded file” there. <label class="filebtn">Continue from a downloaded file<input type="file" id="load2" accept=".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document"></label></p>
+    </section>
   </div>
-  <p class="foot">Your case is generated in your browser from your code. Nothing you type here is stored or sent anywhere.</p>
+  <p class="foot">Your case is generated in your browser from your code. Your answers stay in this browser until you download them; nothing is sent anywhere.</p>
 </div>
+<div class="bar hidden" id="bar"><div class="in"><span class="st" id="st"></span><button id="dl1" type="button">Download my answers (.docx)</button><button class="ghost" id="pdf1" type="button">PDF</button></div></div>
+<div id="printsub"></div>
 <script src="case.js"></script>
 <script src="questions.js"></script>
 <script src="render.js"></script>
+<script src="answers.js"></script>
 <script>
 (function(){
-  var Q = window.CaseQuestions, $ = function(id){ return document.getElementById(id); };
+  var Q = window.CaseQuestions, A = window.Answers, esc = CaseRender.esc, $ = function(id){ return document.getElementById(id); };
   var OPENS = Date.parse("2026-11-18T17:00:00-05:00");
   if (Date.now() < OPENS && location.hash !== "#preview") { $("gate").hidden = false; $("intro").classList.add("hidden"); }
   $("sub").textContent = Q.subtitle;
-  $("inst").innerHTML = Q.instructions.map(function(t){ return "<li>" + CaseRender.esc(t) + "</li>"; }).join("");
-  function show(code){
-    var C = CaseGen.makeCase(code);
-    var line = "Code " + C.code + " · Version " + C.version + " · Check " + C.check;
-    $("rcpt").textContent = line;
+  $("inst").innerHTML = Q.instructions.map(function(t){ return "<li>" + esc(t) + "</li>"; }).join("");
+
+  var C = null, ans = {}, canStore = true, saveTimer = null, savedAt = null, TOTAL = 0;
+  Q.questions.forEach(function(q){ TOTAL += q.parts.length; });
+  function storeKey(){ return "wc2611ans:" + C.code; }
+  function loadLocal(code){ try { var v = localStorage.getItem("wc2611ans:" + code); return v ? (JSON.parse(v).ans || {}) : {}; } catch(e){ canStore = false; return {}; } }
+  function save(){
+    try { localStorage.setItem(storeKey(), JSON.stringify({ t: Date.now(), ans: ans })); savedAt = new Date(); canStore = true; } catch(e){ canStore = false; }
+    status();
+  }
+  function answered(){ var n = 0; for (var k in ans) if (ans[k] && ans[k].trim()) n++; return n; }
+  function missing(){
+    var m = [];
+    Q.questions.forEach(function(q){ q.parts.forEach(function(p, j){ var k = A.key(q.n, j); if (!(ans[k] && ans[k].trim())) m.push(q.n + A.LETTERS[j]); }); });
+    return m;
+  }
+  function status(){
+    var n = answered(), s = "<b>" + n + " of " + TOTAL + "</b> parts answered · ";
+    s += canStore ? (savedAt ? "saved in this browser " + savedAt.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" }) : "saved in this browser") :
+      '<span style="color:var(--warn)">autosave is off in this browser: download your file often</span>';
+    $("st").innerHTML = s;
+    var m = missing();
+    $("left").textContent = m.length ? m.length + " part" + (m.length > 1 ? "s" : "") + " still empty (" + m.join(", ") + ")" : "all parts answered";
+  }
+  function words(t){ var m = (t || "").trim().match(/\S+/g); return m ? m.length : 0; }
+  function addBoxes(){
+    Q.questions.forEach(function(q){
+      var host = document.querySelector("#case" + q.n + " .ask"), h = '<div class="answers"><h3>Your answer to Question ' + q.n + "</h3>";
+      q.parts.forEach(function(p, j){
+        var k = A.key(q.n, j);
+        h += '<label for="a' + k + '">Part (' + A.LETTERS[j] + ")</label>" +
+          '<textarea class="ans" id="a' + k + '" data-k="' + k + '" spellcheck="true" placeholder="Type your answer to part (' + A.LETTERS[j] + ')"></textarea><div class="wc" id="w' + k + '"></div>';
+      });
+      host.insertAdjacentHTML("beforeend", h + "</div>");
+    });
+    Array.prototype.forEach.call(document.querySelectorAll("textarea.ans"), function(t){
+      var k = t.getAttribute("data-k"); t.value = ans[k] || ""; fit(t); $("w" + k).textContent = words(t.value) + " words";
+      t.addEventListener("input", function(){
+        ans[k] = t.value; fit(t); $("w" + k).textContent = words(t.value) + " words";
+        clearTimeout(saveTimer); saveTimer = setTimeout(save, 600); status();
+      });
+    });
+  }
+  function fit(t){ t.style.height = "auto"; t.style.height = Math.max(130, t.scrollHeight + 4) + "px"; }
+
+  function show(code, preset){
+    C = CaseGen.makeCase(code);
+    ans = preset || loadLocal(C.code);
+    $("rcpt").textContent = "Code " + C.code + " · Version " + C.version + " · Check " + C.check;
     $("cases").innerHTML = CaseRender.renderCase(C, Q);
-    $("toc").innerHTML = Q.questions.map(function(q){ return '<a href="#case' + q.n + '">' + q.n + ". " + CaseRender.esc(q.title) + "</a>"; }).join("");
-    $("out").classList.remove("hidden"); $("intro").classList.add("hidden");
-    document.title = "Written Case · " + C.code;
+    addBoxes();
+    $("toc").innerHTML = Q.questions.map(function(q){ return '<a href="#case' + q.n + '">' + q.n + ". " + esc(q.title) + "</a>"; }).join("") + '<a href="#finish">Finish and submit</a>';
+    $("out").classList.remove("hidden"); $("intro").classList.add("hidden"); $("bar").classList.remove("hidden"); document.body.classList.add("has-bar");
+    document.title = "Exam 2 Written Part · " + C.code;
     try { localStorage.setItem("wc2611code", C.code); } catch(e) {}
+    if (preset) save(); else status();
     window.scrollTo(0, 0);
   }
+  function fileName(ext){ return "Exam2_Written_Part_" + C.code + "." + ext; }
+  function downloadDocx(){
+    clearTimeout(saveTimer); save();
+    var blob = A.buildDocx(C, Q, ans), a = document.createElement("a");
+    a.href = URL.createObjectURL(blob); a.download = fileName("docx"); document.body.appendChild(a); a.click();
+    setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 4000);
+  }
+  function printAnswers(){
+    clearTimeout(saveTimer); save();
+    var h = '<div class="eyebrow">Exam 2 · Written Part · Version ' + esc(C.version) + "</div><h1>My answers</h1>" +
+      "<p><b>Code " + esc(C.code) + " · Version " + esc(C.version) + " · Check " + esc(C.check) + "</b><br>Company case: " + esc(C.company) + " · Saved " + esc(A.stamp()) + "</p>";
+    Q.questions.forEach(function(q){
+      h += "<h2>" + q.n + ". " + esc(q.title) + " (" + esc(q.ch) + ")</h2>";
+      q.parts.forEach(function(p, j){ var a = (ans[A.key(q.n, j)] || "").trim();
+        h += '<p class="pp">(' + A.LETTERS[j] + ") " + esc(p) + '</p><p class="pa">' + (a ? esc(a) : "<i>" + A.NONE + "</i>") + "</p>"; });
+    });
+    $("printsub").innerHTML = h; document.body.classList.add("print-sub");
+    var prev = document.title; document.title = fileName("pdf").replace(/\.pdf$/, "");
+    window.print();
+    setTimeout(function(){ document.body.classList.remove("print-sub"); document.title = prev; }, 500);
+  }
+  function loadFile(input){
+    var f = input.files && input.files[0]; if (!f) return;
+    A.readDocx(f, Q).then(function(r){
+      var local = loadLocal(r.code), hasLocal = Object.keys(local).some(function(k){ return local[k] && local[k].trim(); });
+      var same = JSON.stringify(local) === JSON.stringify(r.ans);
+      if (hasLocal && !same && !window.confirm("This browser already has answers for " + r.code + ". Replace them with the answers in the file?")) { show(r.code); return; }
+      show(r.code, r.ans);
+    }).catch(function(e){ $("err").textContent = e.message; $("intro").classList.remove("hidden"); window.scrollTo(0, 0); })
+      .then(function(){ input.value = ""; });
+  }
+
   $("f").addEventListener("submit", function(ev){
     ev.preventDefault();
     var c = CaseGen.normCode($("code").value);
@@ -125,14 +233,19 @@ details{margin:8px 0}summary{cursor:pointer;color:var(--accent);font-weight:600}
     if (c.indexOf("-") < 0) c = "QL-" + c.slice(2);
     $("err").textContent = ""; show(c);
   });
-  $("copy").addEventListener("click", function(){
-    var t = $("rcpt").textContent;
-    try { navigator.clipboard.writeText(t).then(function(){ $("copy").textContent = "Copied"; }); } catch(e) { $("copy").textContent = "Select and copy"; }
+  $("print").addEventListener("click", function(){ document.body.classList.remove("print-sub"); window.print(); });
+  $("other").addEventListener("click", function(){
+    clearTimeout(saveTimer); if (C) save();
+    $("out").classList.add("hidden"); $("bar").classList.add("hidden"); document.body.classList.remove("has-bar");
+    $("intro").classList.remove("hidden"); $("code").value = ""; $("code").focus();
   });
-  $("print").addEventListener("click", function(){ window.print(); });
-  $("other").addEventListener("click", function(){ $("out").classList.add("hidden"); $("intro").classList.remove("hidden"); $("code").value = ""; $("code").focus(); });
+  ["dl1", "dl2"].forEach(function(id){ $(id).addEventListener("click", downloadDocx); });
+  ["pdf1", "pdf2"].forEach(function(id){ $(id).addEventListener("click", printAnswers); });
+  ["load1", "load2"].forEach(function(id){ $(id).addEventListener("change", function(){ loadFile(this); }); });
+  window.addEventListener("pagehide", function(){ if (C) { clearTimeout(saveTimer); save(); } });
   try { var saved = localStorage.getItem("wc2611code"); if (saved) $("code").value = saved; } catch(e) {}
 })();
 </script>
+
 </body>
 </html>

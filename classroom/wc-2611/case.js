@@ -1,4 +1,4 @@
-/* Written Case Assignment, version E2-v1 (frozen).
+/* Exam 2 Written Part, version E2-v1 (frozen).
    Generates a personal company case from a participation code.
    The same code + version always produces exactly the same case, in any browser or in Node. */
 (function (root) {

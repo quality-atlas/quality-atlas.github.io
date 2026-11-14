@@ -1,16 +1,16 @@
-/* Written Case Assignment E2-v1: instructions and questions (frozen). */
+/* Exam 2 Written Part E2-v1: instructions and questions (frozen). */
 (function (root) {
   "use strict";
   var Q = {
-    title: "Written Case Assignment",
+    title: "Exam 2: Written Part",
     subtitle: "Quality tools, problem solving, QFD, SPC, continual improvement, benchmarking, JIT/Lean and TQM implementation",
     instructions: [
       "Enter your participation code to see your own company case. Every student’s case has different numbers, and your answers are graded against the data for your code, so use only your own code.",
-      "Copy the receipt line shown under your case (code, version and check code) to the top of your answer document.",
-      "Answer all 10 questions in complete sentences, numbered 1–10. Use concepts and terms from the textbook (Chapters 15–22) and from class, and refer to the numbers in your case.",
-      "Show every calculation: write the formula, why you used it, and the steps. A final number alone earns little credit.",
+      "Type your answers in the boxes under each question; each part (a, b, c …) has its own box. Write complete sentences, use concepts and terms from the textbook (Chapters 15–22) and from class, and refer to the numbers in your case.",
+      "Show every calculation as text: the formula, why you used it, and the steps (for example: overall weighting = 3 × 1.4 × 1.2 = 5.04). A final number alone earns little credit.",
+      "Your answers are saved automatically in this browser on this device. Download your file now and then as a backup; you can continue from a downloaded file on any device.",
       "You may use a calculator or Excel. Write your answers yourself; this is individual work.",
-      "Submit one Word (.docx) or PDF file through Canvas before the deadline. You can reopen this page with your code at any time; your case never changes."
+      "When you finish, press “Download my answers” (Word .docx, or PDF) and upload that file to Canvas before 11:59 PM. The file includes your code and receipt automatically. Only the file on Canvas counts."
     ],
     questions: [
       { n: 1, ch: "Ch. 15", title: "Selecting and using quality tools",

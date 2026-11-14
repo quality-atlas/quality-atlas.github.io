@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Written Case Assignment</title>
+<style>
+:root{--bg:#f8f6f1;--paper:#fffdf9;--ink:#1f2328;--muted:#5d6670;--line:#e3ded3;--accent:#0f5f6b;--accent-soft:#e3f0f1;--warn:#a1471b;--pt:#1f2328;--lim:#b4532a;--cl:#0f5f6b;--shadow:0 1px 2px rgba(0,0,0,.04),0 6px 24px rgba(0,0,0,.05)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15181b;--paper:#1c2024;--ink:#e8e6e1;--muted:#a3abb3;--line:#30363c;--accent:#62b6c1;--accent-soft:#1f3236;--warn:#e39a6f;--pt:#e8e6e1;--lim:#e39a6f;--cl:#62b6c1;--shadow:none}}
+:root[data-theme="dark"]{--bg:#15181b;--paper:#1c2024;--ink:#e8e6e1;--muted:#a3abb3;--line:#30363c;--accent:#62b6c1;--accent-soft:#1f3236;--warn:#e39a6f;--pt:#e8e6e1;--lim:#e39a6f;--cl:#62b6c1;--shadow:none}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;font-variant-numeric:tabular-nums}
+h1,h2,h3,h4{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;font-weight:600;line-height:1.25;margin:0}
+.wrap{max-width:900px;margin:0 auto;padding:40px 20px 80px}
+.mast{border-bottom:1px solid var(--line);padding-bottom:22px;margin-bottom:28px}
+.eyebrow{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:600}
+h1{font-size:clamp(28px,5vw,40px);margin:6px 0 8px}
+.sub{color:var(--muted);margin:0}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:24px;box-shadow:var(--shadow);margin-bottom:22px}
+.card h2{font-size:22px;margin-bottom:10px}
+ol.inst{padding-left:20px;margin:8px 0 0}ol.inst li{margin:4px 0}
+form{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+input{font:inherit;font-size:18px;letter-spacing:.06em;padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);min-width:0;flex:1 1 220px;text-transform:uppercase}
+input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+button{font:inherit;font-weight:600;padding:12px 20px;border-radius:10px;border:0;background:var(--accent);color:var(--paper);cursor:pointer}
+button.ghost{background:transparent;color:var(--accent);border:1.5px solid var(--accent)}
+.err{color:var(--warn);min-height:1.4em;margin:8px 0 0;font-size:15px}
+.receipt{display:flex;flex-wrap:wrap;gap:8px 22px;align-items:center;background:var(--accent-soft);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:26px}
+.receipt code{font:600 15px/1.4 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.receipt .lbl{font-size:13px;color:var(--muted);display:block}
+.receipt .actions{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap}
+.receipt button{padding:8px 14px;font-size:14px}
+.toc{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 26px}
+.toc a{font-size:14px;text-decoration:none;color:var(--accent);border:1px solid var(--line);border-radius:999px;padding:4px 12px;background:var(--paper)}
+.case{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:26px 24px;margin-bottom:24px;box-shadow:var(--shadow)}
+.case header{display:flex;gap:16px;align-items:flex-start;margin-bottom:14px}
+.case .badge{flex:none;width:40px;height:40px;border-radius:50%;background:var(--accent);color:var(--paper);display:grid;place-items:center;font-weight:700;font-family:Georgia,serif;font-size:18px}
+.case h2{font-size:22px}.case .ch{margin:2px 0 0;color:var(--muted);font-size:14px}
+.case h3{font-size:16px;font-family:inherit;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin:18px 0 8px}
+.case h4{font-size:15px;margin:14px 0 4px}
+.ask{border-top:1px solid var(--line);margin-top:18px}
+.q-lead{margin:6px 0}.question ol{padding-left:22px;margin:6px 0}.question li{margin:6px 0}
+.tbl-wrap{overflow-x:auto;margin:10px 0 14px;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th{text-align:left;font-weight:600;color:var(--muted);font-size:13px;border-bottom:1.5px solid var(--line);padding:8px 10px;vertical-align:bottom}
+td{border-bottom:1px solid var(--line);padding:7px 10px}
+table.num td:not(:first-child),table.num th:not(:first-child){text-align:right;white-space:nowrap}
+table.num td:first-child,table.num th:first-child{min-width:150px}table.small{font-size:14px}table.rel{font-size:14px}table.rel th{white-space:normal!important;min-width:96px;text-align:center}table.rel td:first-child,table.rel th:first-child{min-width:170px;text-align:left}table.rel td:not(:first-child){text-align:center;font-weight:600}table.rel th:not(:first-child){text-align:center}
+ul.facts{padding-left:20px}ul.facts li{margin:6px 0}
+.kv{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:15px}
+.note{color:var(--muted);font-size:14px}.prob{margin:10px 0}
+details{margin:8px 0}summary{cursor:pointer;color:var(--accent);font-weight:600}
+.chart{width:100%;height:auto;display:block;margin:4px 0 10px}
+.chart .series{fill:none;stroke:var(--pt);stroke-width:1.4}.chart .pt{fill:var(--pt)}
+.chart .lim{stroke:var(--lim);stroke-width:1.2;stroke-dasharray:5 4}.chart .cl{stroke:var(--cl);stroke-width:1.2}
+.chart text{fill:var(--muted);font-size:11px;font-family:inherit}
+.foot{color:var(--muted);font-size:13px;margin-top:30px;text-align:center}
+.hidden{display:none}
+@media (max-width:560px){.wrap{padding:24px 14px 60px}.card,.case{padding:18px 14px}.receipt .actions{margin-left:0}}
+@media print{body{background:#fff;color:#000;font-size:12px}.wrap{padding:0;max-width:none}.card.intro,.toc,.receipt .actions,form,.foot{display:none}.case{box-shadow:none;break-inside:auto;page-break-before:always;border:0;padding:0}.case:first-of-type{page-break-before:auto}details{display:block}details>*{display:block}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="mast">
+    <div class="eyebrow">Version E2-v1 · frozen</div>
+    <h1>Written Case Assignment</h1>
+    <p class="sub" id="sub"></p>
+  </div>
+
+  <div class="card" id="gate" hidden>
+    <h2>This page opens Wednesday, November 18, at 5:00 PM (Eastern)</h2>
+    <p class="note">Come back at the start time and enter your code. If the time has passed, reload the page.</p>
+  </div>
+
+  <div class="card intro" id="intro">
+    <h2>Before you start</h2>
+    <ol class="inst" id="inst"></ol>
+    <form id="f" autocomplete="off">
+      <input id="code" name="code" placeholder="QL-XXXXX" aria-label="Your participation code" maxlength="12" spellcheck="false">
+      <button type="submit">Show my case</button>
+    </form>
+    <p class="err" id="err" role="alert"></p>
+  </div>
+
+  <div id="out" class="hidden">
+    <div class="receipt">
+      <div><span class="lbl">Copy this line to the top of your answers</span><code id="rcpt"></code></div>
+      <div class="actions"><button class="ghost" id="copy" type="button">Copy</button><button class="ghost" id="print" type="button">Save as PDF / print</button><button class="ghost" id="other" type="button">Different code</button></div>
+    </div>
+    <nav class="toc" id="toc" aria-label="Cases"></nav>
+    <div id="cases"></div>
+  </div>
+  <p class="foot">Your case is generated in your browser from your code. Nothing you type here is stored or sent anywhere.</p>
+</div>
+<script src="case.js"></script>
+<script src="questions.js"></script>
+<script src="render.js"></script>
+<script>
+(function(){
+  var Q = window.CaseQuestions, $ = function(id){ return document.getElementById(id); };
+  var OPENS = Date.parse("2026-11-18T17:00:00-05:00");
+  if (Date.now() < OPENS && location.hash !== "#preview") { $("gate").hidden = false; $("intro").classList.add("hidden"); }
+  $("sub").textContent = Q.subtitle;
+  $("inst").innerHTML = Q.instructions.map(function(t){ return "<li>" + CaseRender.esc(t) + "</li>"; }).join("");
+  function show(code){
+    var C = CaseGen.makeCase(code);
+    var line = "Code " + C.code + " · Version " + C.version + " · Check " + C.check;
+    $("rcpt").textContent = line;
+    $("cases").innerHTML = CaseRender.renderCase(C, Q);
+    $("toc").innerHTML = Q.questions.map(function(q){ return '<a href="#case' + q.n + '">' + q.n + ". " + CaseRender.esc(q.title) + "</a>"; }).join("");
+    $("out").classList.remove("hidden"); $("intro").classList.add("hidden");
+    document.title = "Written Case · " + C.code;
+    try { localStorage.setItem("wc2611code", C.code); } catch(e) {}
+    window.scrollTo(0, 0);
+  }
+  $("f").addEventListener("submit", function(ev){
+    ev.preventDefault();
+    var c = CaseGen.normCode($("code").value);
+    if (!/^QL-?[A-Z2-9]{5}$/.test(c)) {
+      $("err").textContent = /[01OI]/.test(c.replace(/^QL-?/, "")) ? "Codes never contain O, 0, I or 1. Please check your code." : "Codes look like QL-7F3K2. Please check your code.";
+      return;
+    }
+    if (c.indexOf("-") < 0) c = "QL-" + c.slice(2);
+    $("err").textContent = ""; show(c);
+  });
+  $("copy").addEventListener("click", function(){
+    var t = $("rcpt").textContent;
+    try { navigator.clipboard.writeText(t).then(function(){ $("copy").textContent = "Copied"; }); } catch(e) { $("copy").textContent = "Select and copy"; }
+  });
+  $("print").addEventListener("click", function(){ window.print(); });
+  $("other").addEventListener("click", function(){ $("out").classList.add("hidden"); $("intro").classList.remove("hidden"); $("code").value = ""; $("code").focus(); });
+  try { var saved = localStorage.getItem("wc2611code"); if (saved) $("code").value = saved; } catch(e) {}
+})();
+</script>
+</body>
+</html>

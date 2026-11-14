@@ -1,0 +1,68 @@
+/* Written Case Assignment E2-v1: instructions and questions (frozen). */
+(function (root) {
+  "use strict";
+  var Q = {
+    title: "Written Case Assignment",
+    subtitle: "Quality tools, problem solving, QFD, SPC, continual improvement, benchmarking, JIT/Lean and TQM implementation",
+    instructions: [
+      "Enter your participation code to see your own company case. Every student’s case has different numbers, and your answers are graded against the data for your code, so use only your own code.",
+      "Copy the receipt line shown under your case (code, version and check code) to the top of your answer document.",
+      "Answer all 10 questions in complete sentences, numbered 1–10. Use concepts and terms from the textbook (Chapters 15–22) and from class, and refer to the numbers in your case.",
+      "Show every calculation: write the formula, why you used it, and the steps. A final number alone earns little credit.",
+      "You may use a calculator or Excel. Write your answers yourself; this is individual work.",
+      "Submit one Word (.docx) or PDF file through Canvas before the deadline. You can reopen this page with your code at any time; your case never changes."
+    ],
+    questions: [
+      { n: 1, ch: "Ch. 15", title: "Selecting and using quality tools",
+        text: "Your company collects a great deal of quality data but keeps working on the wrong problems. Case 1 lists last quarter’s defects with their counts and the average cost of one occurrence.",
+        parts: ["Rank the categories by count and by total cost (count × cost per occurrence). For each ranking, identify the “vital few” and state their cumulative percentage.",
+                "Explain why the two rankings differ and which one should guide the improvement budget. Use the Pareto Principle and the idea of management by facts.",
+                "The second table stratifies the top-cost category by production line and shift. What does it reveal? Is this a symptom or a cause? Which tool would you use next to move from this symptom toward the underlying cause, and why?"] },
+      { n: 2, ch: "Ch. 16", title: "Problems that keep coming back",
+        text: "The problem in Case 2 has been “fixed” again and again, and it keeps returning.",
+        parts: ["Using the log, explain why each fix was maintenance rather than a solution, and calculate what the recurrences have cost so far (returns × cost per return).",
+                "Use the evidence statements to build a Five Whys chain from the symptom to the root cause. Name the statements that are irrelevant and explain why they are.",
+                "Show how the PDCA cycle and the Practical Problem-Solving Process would handle this problem: the improvement objective, the point of cause, the countermeasure, how you would check it with data, and which standard must change."] },
+      { n: 3, ch: "Ch. 17", title: "QFD and the voice of the customer",
+        text: "Customers keep complaining even though your products meet every internal technical specification. Case 3 is a House of Quality your team has started.",
+        parts: ["Complete the Planning matrix: improvement factor = (planned − current) × 0.2 + 1; overall weighting = importance × improvement factor × sales point; and each need’s percentage of the total weighting.",
+                "Compute the technical priority of each technical requirement (the sum of relationship strength × overall weighting) and rank them.",
+                "The matrix contains one structural problem that the textbook says every House of Quality must be checked for. Find it and explain what it means for the design.",
+                "Explain the trade-off noted in the roof, and how QFD, the voice of the customer and these priorities close the gap between “meets spec” and “satisfies customers.”"] },
+      { n: 4, ch: "Ch. 18", title: "Reacting to variation",
+        text: "Managers respond to every fluctuation in Case 4’s process by adjusting it. The case shows 25 subgroups of five measurements with X̄ and R charts.",
+        parts: ["Verify the center line and control limits from X̄̄ and R̄ (A₂ = 0.577, D₃ = 0, D₄ = 2.114).",
+                "Identify every special-cause signal (a point beyond a limit, or a run of 8 or more points on one side of the center line). Explain how it differs from common-cause variation, what management should do about it, and what it should not do.",
+                "Last month the supervisor adjusted the machine after every check to bring it back to target. Compare the standard deviations before and during that policy, and explain why adjusting made the process worse.",
+                "Estimate σ = R̄/d₂ (d₂ = 2.326) and compute Cp and Cpk. Is the process capable? Is “in statistical control” the same as “capable”?"] },
+      { n: 5, ch: "Ch. 19", title: "Choosing an improvement method",
+        text: "Case 5 describes three performance problems in your company.",
+        parts: ["For each problem, recommend Kaizen, Six Sigma (DMAIC), Lean, Lean Six Sigma or the Theory of Constraints, and justify the choice from the nature of the problem.",
+                "For each, describe the first two concrete steps you would take with that method (for example, Define and Measure in DMAIC, or identify and exploit in the Theory of Constraints)."] },
+      { n: 6, ch: "Ch. 20", title: "Benchmarking without copying",
+        text: "Case 6 compares your annual cost for six processes with the industry average and lists three possible benchmarking partners.",
+        parts: ["Which process should you benchmark first, and why not the others? (Consider the size of each gap and whether the process is a key business process.)",
+                "Choose a partner and justify the choice using the textbook’s criteria (best-in-class versus best-in-industry, willingness to share, competitors, and the “OK-in-class” trap).",
+                "Your company has different processes and market conditions from the partner. Explain how you will use the benchmark without simply copying it: baselining your own process, using both quantitative and qualitative data, adapting the practice, and aiming to surpass it."] },
+      { n: 7, ch: "Ch. 21", title: "From push to JIT/Lean",
+        text: "Your plant carries large inventories to avoid stockouts. Case 7 describes its current push system.",
+        parts: ["Compute the current production cycle time (work-in-process ÷ daily output) and the percentage of that time that adds value.",
+                "The key machine makes four parts. Show whether it could produce every part every day with today’s setup time, and with the setup time after the planned setup-reduction project. Compare the average inventory under today’s lot size with daily lots.",
+                "Explain how moving from push toward JIT/Lean changes the roles of inventory, kanban, lot size and setup time on your line, and the order in which you would reduce work-in-process."] },
+      { n: 8, ch: "Ch. 21", title: "When JIT/Lean exposes problems",
+        text: "After cutting inventory under JIT/Lean, your plant now has more production stoppages and late deliveries (Case 8).",
+        parts: ["Build a Pareto of the stoppage causes by minutes of downtime and identify the vital few.",
+                "What weaknesses do these stoppages reveal that the old inventory was hiding? Use the textbook’s lake-and-rocks analogy.",
+                "The plant manager wants to go back to two weeks of buffer stock. Respond to the proposal, and recommend specific management actions for the top causes."] },
+      { n: 9, ch: "Ch. 22", title: "Why the TQM initiative stalled",
+        text: "Case 9 describes a TQM initiative that invested in tools and training but produced little improvement.",
+        parts: ["Diagnose the failure in terms of management commitment, communication and teamwork. Cite at least four specific facts from your case and the textbook’s implementation approaches to be avoided.",
+                "Propose a corrected implementation sequence based on the steps of the Goetsch–Davis implementation process."] },
+      { n: 10, ch: "Ch. 15–22", title: "An integrated improvement strategy",
+        text: "Your company has high defect costs, recurring problems, excess inventory and declining customer satisfaction, as Cases 1–9 show.",
+        parts: ["Write a one-page improvement plan that uses quality tools, SPC, a continual-improvement method, benchmarking and JIT/Lean together under TQM leadership.",
+                "Use at least five numbers from your own case, set measurable targets, and explain the order of the steps: what must come first and why (for example, why processes must be stable and capable before inventory is cut)."] }
+    ]
+  };
+  if (typeof module !== "undefined" && module.exports) module.exports = Q; else root.CaseQuestions = Q;
+})(this);
